@@ -20,7 +20,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'J.A.T.E.'
+        // title: 'J.A.T.E.'
       }),
 
       new InjectManifest({
@@ -36,6 +36,8 @@ module.exports = () => {
         description: 'An easy way to edit text!',
         start_url: '/',
         publicPath: '/',
+        background_color: '#225ca3',
+        theme_color: '#225ca3',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
@@ -58,7 +60,7 @@ module.exports = () => {
           use: {
             loader: 'babel-loader',
             options: {
-              preset: ['@babel/preset-env'],
+              presets: ['@babel/preset-env'],
               plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
             },
           },
